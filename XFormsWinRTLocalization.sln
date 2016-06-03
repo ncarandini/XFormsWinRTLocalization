@@ -19,6 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
+		Hystorical notes.txt = Hystorical notes.txt
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -268,6 +269,8 @@ Global
 		{53858E13-6541-4569-A4A4-0109779AA8FF}.Debug|ARM.Deploy.0 = Debug|ARM
 		{53858E13-6541-4569-A4A4-0109779AA8FF}.Debug|iPhone.ActiveCfg = Debug|x86
 		{53858E13-6541-4569-A4A4-0109779AA8FF}.Debug|iPhoneSimulator.ActiveCfg = Debug|x86
+		{53858E13-6541-4569-A4A4-0109779AA8FF}.Debug|iPhoneSimulator.Build.0 = Debug|x86
+		{53858E13-6541-4569-A4A4-0109779AA8FF}.Debug|iPhoneSimulator.Deploy.0 = Debug|x86
 		{53858E13-6541-4569-A4A4-0109779AA8FF}.Debug|x64.ActiveCfg = Debug|x64
 		{53858E13-6541-4569-A4A4-0109779AA8FF}.Debug|x64.Build.0 = Debug|x64
 		{53858E13-6541-4569-A4A4-0109779AA8FF}.Debug|x64.Deploy.0 = Debug|x64

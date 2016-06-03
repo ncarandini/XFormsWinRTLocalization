@@ -1,0 +1,29 @@
+// This was the Joost hack:
+
+	if (Device.OS != TargetPlatform.Windows)
+	{
+	    var resmgr = new ResourceManager(ResourceId, typeof(TranslateExtension).GetTypeInfo().Assembly);
+	    translation = resmgr.GetString(Text, cultureInfo);
+	}
+	else
+	{
+	    // HACK by Joost van Schaik - @LocalJoost
+	    // Resx translation is apparently messed up in Windonws Phone 8.1 - if you put resx files in a PCL
+	    // the resource manager just cannot find the resources when deployed to a PHONE (not an emulator).
+	    // Tried this solution but could not get it to work  
+	    // http://blogs.msdn.com/b/philliphoff/archive/2014/11/19/missingmanifestresourceexception-when-using-portable-class-libraries-in-winrt.aspx
+	    // This does.
+	    
+		PropertyInfo propInfo = typeof(AppResources).GetRuntimeProperties().FirstOrDefault(p => p.Name == Text);
+	    if (propInfo != null)
+	    {
+	        translation = propInfo.GetValue(typeof(AppResources)).ToString();
+	    }
+	}
+
+// I made this, that use the resource manager of the resource insted of creating a new one. Doing so we allways get
+// the right resource manager, also when we are in the WinRT 8.1 environment, thanks to the WinRT hack
+// (http://blogs.msdn.com/b/philliphoff/archive/2014/11/19/missingmanifestresourceexception-when-using-portable-class-libraries-in-winrt.aspx)
+
+    var resmgr = typeof(AppResources).GetRuntimeFields().First(m => m.Name == "resourceMan").GetValue(typeof(AppResources)) as ResourceManager;
+    translation = resmgr.GetString(Text, cultureInfo);

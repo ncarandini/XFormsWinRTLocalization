@@ -24,6 +24,12 @@
     <string>6.0</string>
     <key>CFBundleDisplayName</key>
     <string>XFormsWinRTLocalization</string>
+    <key>CFBundleLocalizations</key>
+    <array>
+      <string>it</string>
+    </array>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
     <key>CFBundleIdentifier</key>
     <string>com.yourcompany.XFormsWinRTLocalization</string>
     <key>CFBundleVersion</key>

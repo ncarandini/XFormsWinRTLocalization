@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿using System.Linq;
+using System.Reflection;
 using Xamarin.Forms;
+using XFormsWinRTLocalization.PagesCs;
+using XFormsWinRTLocalization.PagesXaml;
+using XFormsWinRTLocalization.Strings;
 
 namespace XFormsWinRTLocalization
 {
@@ -11,35 +11,38 @@ namespace XFormsWinRTLocalization
     {
         public App()
         {
-            // The root page of your application
-            MainPage = new ContentPage
+            System.Diagnostics.Debug.WriteLine("===============");
+            var assembly = typeof(App).GetTypeInfo().Assembly;
+            foreach (var res in assembly.GetManifestResourceNames())
+                System.Diagnostics.Debug.WriteLine("found resource: " + res);
+
+
+            if (Device.OS == TargetPlatform.Android || Device.OS == TargetPlatform.iOS)
             {
-                Content = new StackLayout
-                {
-                    VerticalOptions = LayoutOptions.Center,
-                    Children = {
-                        new Label {
-                            XAlign = TextAlignment.Center,
-                            Text = "Welcome to Xamarin Forms!"
-                        }
-                    }
-                }
-            };
-        }
+                DependencyService.Get<ILocalize>().SetLocale();
+                AppResources.Culture = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
+            }
 
-        protected override void OnStart()
-        {
-            // Handle when your app starts
-        }
+            if (Device.OS == TargetPlatform.Windows)
+            {
+                // Solve the "System.Resources.MissingManifestResourceException"
+                // using the trick shown here: https://blogs.msdn.microsoft.com/philliphoff/2014/11/19/missingmanifestresourceexception-when-using-portable-class-libraries-within-winrt/
 
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
+                // WinRTResManager.InjectIntoResxGeneratedApplicationResourcesClass(typeof(AppResources));
 
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
+                //typeof(AppResources).GetRuntimeFields()
+                //.First(m => m.Name == "resourceMan")
+                //.SetValue(null, new ResManager(typeof(AppResources).FullName, typeof(AppResources).GetTypeInfo().Assembly));
+
+            }
+
+            var tabs = new TabbedPage();
+
+            tabs.Children.Add(new FirstPage { Title = "C#", Icon = "csharp.png" });
+
+            tabs.Children.Add(new FirstPageXaml { Title = "Xaml", Icon = "xaml.png" });
+
+            MainPage = tabs;
         }
     }
 }

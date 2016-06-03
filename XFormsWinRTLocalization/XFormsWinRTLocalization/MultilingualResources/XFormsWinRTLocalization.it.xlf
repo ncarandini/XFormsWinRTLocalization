@@ -1,18 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en" target-language="it" original="XFORMSWINRTLOCALIZATION/STRINGS/RESOURCE.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+  <file datatype="xml" source-language="en" target-language="it" original="XFORMSWINRTLOCALIZATION/STRINGS/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
     <header>
       <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1605.0" tool-company="Microsoft" />
     </header>
     <body>
-      <group id="XFORMSWINRTLOCALIZATION/STRINGS/RESOURCE.RESX" datatype="resx">
+      <group id="XFORMSWINRTLOCALIZATION/STRINGS/APPRESOURCES.RESX" datatype="resx">
+        <trans-unit id="AddButton" translate="yes" xml:space="preserve">
+          <source>Add new item</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Aggiungi nuovo elemento</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">this string appears on a button to add a new item to the list</note>
+        </trans-unit>
+        <trans-unit id="AddMessage0" translate="yes" xml:space="preserve">
+          <source>You added no new items</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hai non aggiunto nessun nuovo elemento</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">message to the user when no items are chosen</note>
+        </trans-unit>
+        <trans-unit id="AddMessage1" translate="yes" xml:space="preserve">
+          <source>You added one new items</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hai aggiunto uno nuovi elementi</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">message to the user when ONE item is chosen</note>
+        </trans-unit>
+        <trans-unit id="AddMessageN" translate="yes" xml:space="preserve">
+          <source>You added {0} new items</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hai aggiunto nuovi elementi {0}</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">message to the user when MORE THAN ONE items are chosen</note>
+        </trans-unit>
+        <trans-unit id="CancelButton" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Annulla</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">button on alert popup to close it</note>
+        </trans-unit>
         <trans-unit id="ItemAlpha" translate="yes" xml:space="preserve">
           <source>The Alpha item</source>
-          <target state="translated" state-qualifier="mt-suggestion">L'elemento Alpha</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">L'elemento Alpha</target>
         </trans-unit>
         <trans-unit id="ItemBeta" translate="yes" xml:space="preserve">
           <source>The Beta item</source>
-          <target state="translated" state-qualifier="mt-suggestion">L'elemento Beta</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">L'elemento Beta</target>
+        </trans-unit>
+        <trans-unit id="NotesLabel" translate="yes" xml:space="preserve">
+          <source>Notes:</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Note:</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">label for input field</note>
+        </trans-unit>
+        <trans-unit id="NotesPlaceholder" translate="yes" xml:space="preserve">
+          <source>eg. buy milk</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">es. comprare il latte</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">example input for notes field</note>
+        </trans-unit>
+        <trans-unit id="PickerName" translate="yes" xml:space="preserve">
+          <source>Choose a number</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Scegli un numero</target>
         </trans-unit>
       </group>
     </body>

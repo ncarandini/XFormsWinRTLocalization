@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddButton" xml:space="preserve">
+    <value>Aggiungi nuovo elemento</value>
+    <comment>this string appears on a button to add a new item to the list</comment>
+  </data>
+  <data name="AddMessage0" xml:space="preserve">
+    <value>Hai non aggiunto nessun nuovo elemento</value>
+    <comment>message to the user when no items are chosen</comment>
+  </data>
+  <data name="AddMessage1" xml:space="preserve">
+    <value>Hai aggiunto uno nuovi elementi</value>
+    <comment>message to the user when ONE item is chosen</comment>
+  </data>
+  <data name="AddMessageN" xml:space="preserve">
+    <value>Hai aggiunto nuovi elementi {0}</value>
+    <comment>message to the user when MORE THAN ONE items are chosen</comment>
+  </data>
+  <data name="CancelButton" xml:space="preserve">
+    <value>Annulla</value>
+    <comment>button on alert popup to close it</comment>
+  </data>
+  <data name="ItemAlpha" xml:space="preserve">
+    <value>L'elemento Alpha</value>
+  </data>
+  <data name="ItemBeta" xml:space="preserve">
+    <value>L'elemento Beta</value>
+  </data>
+  <data name="NotesLabel" xml:space="preserve">
+    <value>Note:</value>
+    <comment>label for input field</comment>
+  </data>
+  <data name="NotesPlaceholder" xml:space="preserve">
+    <value>es. comprare il latte</value>
+    <comment>example input for notes field</comment>
+  </data>
+  <data name="PickerName" xml:space="preserve">
+    <value>Scegli un numero</value>
+  </data>
+</root>
