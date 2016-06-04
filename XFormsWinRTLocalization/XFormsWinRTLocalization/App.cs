@@ -23,19 +23,6 @@ namespace XFormsWinRTLocalization
                 AppResources.Culture = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
             }
 
-            if (Device.OS == TargetPlatform.Windows)
-            {
-                // Solve the "System.Resources.MissingManifestResourceException"
-                // using the trick shown here: https://blogs.msdn.microsoft.com/philliphoff/2014/11/19/missingmanifestresourceexception-when-using-portable-class-libraries-within-winrt/
-
-                // WinRTResManager.InjectIntoResxGeneratedApplicationResourcesClass(typeof(AppResources));
-
-                //typeof(AppResources).GetRuntimeFields()
-                //.First(m => m.Name == "resourceMan")
-                //.SetValue(null, new ResManager(typeof(AppResources).FullName, typeof(AppResources).GetTypeInfo().Assembly));
-
-            }
-
             var tabs = new TabbedPage();
 
             tabs.Children.Add(new FirstPage { Title = "C#", Icon = "csharp.png" });

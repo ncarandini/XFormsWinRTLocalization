@@ -9,8 +9,6 @@ namespace XFormsWinRTLocalization
 		void SetLocale();
 
 		CultureInfo GetCurrentCultureInfo();
-
-        // String GetString(string key);
     }
 }
 
