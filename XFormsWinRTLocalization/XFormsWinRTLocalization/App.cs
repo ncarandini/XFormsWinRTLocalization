@@ -14,10 +14,11 @@ namespace XFormsWinRTLocalization
             System.Diagnostics.Debug.WriteLine("===============");
             var assembly = typeof(App).GetTypeInfo().Assembly;
             foreach (var res in assembly.GetManifestResourceNames())
+            {
                 System.Diagnostics.Debug.WriteLine("found resource: " + res);
+            }
 
-
-            if (Device.OS == TargetPlatform.Android || Device.OS == TargetPlatform.iOS)
+            if (Device.RuntimePlatform == Device.Android || Device.RuntimePlatform == Device.iOS)
             {
                 DependencyService.Get<ILocalize>().SetLocale();
                 AppResources.Culture = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
